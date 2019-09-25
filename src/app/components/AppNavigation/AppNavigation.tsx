@@ -1,8 +1,17 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 import './AppNavigation.scss';
+import { LogOutBtn } from '..';
 
-export const AppNavigation: React.FunctionComponent = () => {
+type Props = {
+  isAuthorized: boolean;
+  logOut: any;
+};
+
+export const AppNavigation: React.FunctionComponent<Props> = ({
+  isAuthorized,
+  logOut
+}) => {
   return (
     <nav className="App-navigation">
       <ul>
@@ -11,16 +20,35 @@ export const AppNavigation: React.FunctionComponent = () => {
             Home
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/posts" activeClassName="my-active">
-            Posts
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/albums" activeClassName="my-active">
-            Albums
-          </NavLink>
-        </li>
+        {isAuthorized ? (
+          <li>
+            <NavLink to="/posts" activeClassName="my-active">
+              Posts
+            </NavLink>
+          </li>
+        ) : (
+          ''
+        )}
+        {isAuthorized ? (
+          <li>
+            <NavLink to="/albums" activeClassName="my-active">
+              Albums
+            </NavLink>
+          </li>
+        ) : (
+          ''
+        )}
+        {isAuthorized ? (
+          <li>
+            <LogOutBtn logOut={logOut} btnName='Log out'/>
+          </li>
+        ) : (
+          <li>
+            <NavLink to="/login" activeClassName="my-active">
+              Log in
+            </NavLink>
+          </li>
+        )}
       </ul>
     </nav>
   );

@@ -5,31 +5,42 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { ReduxState } from '../../store/reducers/root.reducer';
 
+import * as actionCreators from '../../store/actions/index';
+
 import PageNotFound from '../staticPages/PageNotFound';
 import Home from '../Home/Home';
 import Posts from '../Posts/Posts';
 import Albums from '../Albums/Albums';
 import NewPost from '../Posts/NewPost/NewPost';
+import LogIn from '../LogIn/LogIn';
 
 import { PageContainer, AppNavigation } from '../../components';
 
 type ReduxProps = {
-  token: string;
+  isAuthorized: boolean;
+  logOut: any
 };
 
-class App extends React.Component<ReduxProps> {
+class App extends React.Component<ReduxProps>  {
   componentDidMount() {}
 
+  logOut = () => {
+    this.props.logOut();
+  }
+
   render() {
+    const { isAuthorized } = this.props;
+
     return (
       <main>
         <BrowserRouter>
-          <AppNavigation />
+          <AppNavigation isAuthorized={isAuthorized} logOut={this.logOut} />
           <PageContainer>
             <Switch>
-              <Route path={'/albums'} component={Albums} />
-              <Route path={'/posts/newPost'} component={NewPost} />
-              <Route path={'/posts'} component={Posts} />
+              {isAuthorized ? <Route path={'/albums'} component={Albums} /> : ''}
+              {isAuthorized ? <Route path={'/posts/newPost'} component={NewPost} />: ''}
+              {isAuthorized ? <Route path={'/posts'} component={Posts} />: ''}
+              {!isAuthorized ? <Route path={'/login'} component={LogIn} /> : ''}
               <Route path={'/'} component={Home} />
               <Route component={PageNotFound} />
             </Switch>
@@ -42,12 +53,14 @@ class App extends React.Component<ReduxProps> {
 
 const mapStateToProps = (state: ReduxState) => {
   return {
-    token: state.appReducer.token
+    isAuthorized: state.appReducer.isAuthorized
   };
 };
 
 const mapDispatchToProps = (dispatch: any) => {
-  return {};
+  return {
+    logOut: () => dispatch(actionCreators.logOut())
+  };
 };
 
 export default connect(

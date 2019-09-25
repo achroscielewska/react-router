@@ -13,3 +13,4 @@ export * from './UI/Article/Article';
 export * from './UI/ListItem/ListItem';
 export * from './UI/OneItem/OneItem';
 export * from './UI/Btns/BackBtn/BackBtn';
+export * from './UI/Btns/LogOutBtn/LogOutBtn';

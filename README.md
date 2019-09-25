@@ -43,3 +43,7 @@ You will also see any lint errors in the console.
 - nested routes (OnePost in Posts)
 - 404 Case
 
+## conditional-redirects
+
+- guards added to state -> in app reducer
+

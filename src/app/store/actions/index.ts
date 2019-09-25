@@ -1,8 +1,8 @@
 export {
-    setHomePage,
-    leaveHomePage,
-  } from './app/app';
+  logIn,
+  logOut,
+} from './app/app';
 
-  export {
-    getPost
-  } from './post/post';
+export {
+  getPost
+} from './post/post';

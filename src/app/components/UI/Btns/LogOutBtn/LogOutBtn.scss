@@ -1,0 +1,9 @@
+@import '../../../../../assets/utilities/color-variables';
+
+.App-logout-btn {
+  color: $secondary-contrastText;
+  margin: 5px;
+  padding: 5px;
+  text-transform: uppercase;
+  text-align: center
+}

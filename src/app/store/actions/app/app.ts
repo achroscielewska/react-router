@@ -1,13 +1,13 @@
 import * as actionTypes from '../actionTypes';
 
-export const setHomePage = () => {
+export const logIn = () => {
     return {
-        type: actionTypes.SET_HOME_PAGE,
+        type: actionTypes.LOG_IN,
     }
 }
 
-export const leaveHomePage = () => {
+export const logOut = () => {
     return {
-        type: actionTypes.LEAVE_HOME_PAGE,
+        type: actionTypes.LOG_OUT,
     }
 }

@@ -9,9 +9,8 @@ export const rootReducer: Reducer = combineReducers({ appReducer, postReducer })
 
 export type ReduxState = {
   appReducer: {
-    token: string;
+    isAuthorized: boolean;
     error: boolean;
-    isHomePage: boolean,
     homePageContent: any,
     postsPageContent: any;
     albumsPageContent: any;

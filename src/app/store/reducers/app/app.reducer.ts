@@ -4,9 +4,8 @@ import { HOME_PAGE_CONTENT, POSTS_PAGE_CONTENT, ALBUMS_PAGE_CONTENT, NEW_POST_PA
 
 
 type State = {
-  token: string;
+  isAuthorized: boolean;
   error: boolean;
-  isHomePage: boolean;
   homePageContent: any;
   postsPageContent: any;
   albumsPageContent: any;
@@ -19,9 +18,8 @@ type Action = {
 }
 
 const initialState: State = {
-  token: '',
+  isAuthorized: false,
   error: false,
-  isHomePage: false,
   homePageContent: HOME_PAGE_CONTENT,
   postsPageContent: POSTS_PAGE_CONTENT,
   albumsPageContent: ALBUMS_PAGE_CONTENT,
@@ -30,15 +28,15 @@ const initialState: State = {
 
 const appReducer: Reducer<State, Action> = (state = initialState, action: Action) => {
   switch (action.type) {
-    case actionTypes.SET_HOME_PAGE:
+    case actionTypes.LOG_IN:
       return {
         ...state,
-        isHomePage: true
+        isAuthorized: true
       }
-    case actionTypes.LEAVE_HOME_PAGE:
+    case actionTypes.LOG_OUT:
       return {
         ...state,
-        isHomePage: false
+        isAuthorized: false
       }
   }
   return state;
