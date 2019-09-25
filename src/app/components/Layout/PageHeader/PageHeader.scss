@@ -1,0 +1,15 @@
+@import '../../../../assets/utilities/color-variables';
+
+.App-page-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  z-index: 20px;
+  background-color: $secondary-color;
+  color: $primary-color;
+  .App-page-header-title {
+    margin: 0px 5px 0px 20px;
+    text-transform: uppercase;
+  }
+}

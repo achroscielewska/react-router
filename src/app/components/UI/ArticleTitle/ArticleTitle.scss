@@ -1,0 +1,8 @@
+@import '../../../../assets/utilities/color-variables';
+
+.App-article-header {
+  padding: 5px 0px;
+  .App-article-title {
+    color: $primary-color;
+  }
+}

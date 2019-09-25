@@ -1,0 +1,16 @@
+@import '../../../../../assets/utilities/color-variables';
+
+.App-btn-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.App-back-btn {
+  width: 5%;
+  color: $secondary-contrastText;
+  margin: 5px;
+  padding: 5px;
+  background-color: $primary-color;
+  text-transform: uppercase;
+  text-align: center
+}

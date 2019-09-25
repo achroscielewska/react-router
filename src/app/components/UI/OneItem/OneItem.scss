@@ -1,0 +1,9 @@
+@import '../../../../assets/utilities/color-variables';
+
+.App-one-item {
+  width: 80%;
+  margin: 5px auto;
+  padding: 5px;
+  border: 1px solid $secondary-color;
+  background-color: $secondary-color;
+}

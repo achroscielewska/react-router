@@ -1,0 +1,35 @@
+@import '../../../assets/utilities/color-variables';
+
+.App-article-navigation {
+  padding: 10px;
+  z-index: 20px;
+  background-color: $primary-light;
+  text-transform: uppercase;
+  text-align: right;
+  width: 80%;
+  margin: 0 auto;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    
+  }
+  a {
+    text-decoration: none;
+    color: $secondary-contrastText;
+    margin: 5px;
+    padding: 5px;
+    background-color: $primary-color;
+  }
+}
+
+.App-article-navigation li:hover a,
+.App-article-navigation li:active a,
+.App-article-navigation a.my-active {
+    color: $primary-color;
+    background-color: $secondary-contrastText;
+
+}
