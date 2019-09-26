@@ -7,13 +7,7 @@ import { ReduxState } from '../../store/reducers/root.reducer';
 
 import * as actionCreators from '../../store/actions/index';
 
-import PageNotFound from '../staticPages/PageNotFound';
-import Home from '../Home/Home';
-import Posts from '../Posts/Posts';
-import Albums from '../Albums/Albums';
-import NewPost from '../Posts/NewPost/NewPost';
-import LogIn from '../LogIn/LogIn';
-
+import { LogIn, Albums, NewPost, Posts, Home, PageNotFound } from '..';
 import { PageContainer, AppNavigation } from '../../components';
 
 type ReduxProps = {
