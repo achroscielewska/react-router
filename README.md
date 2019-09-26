@@ -43,6 +43,10 @@ You will also see any lint errors in the console.
 - nested routes (OnePost in Posts)
 - 404 Case
 
-## conditional-redirects
+## conditional-redirects branch
 
 - guards added to state -> in app reducer
+
+## lazy-loading branch
+
+- routes lazy loading added to route in app container
