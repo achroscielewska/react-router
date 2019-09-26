@@ -5,28 +5,72 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { ReduxState } from '../../store/reducers/root.reducer';
 
 import { PageContainer, AppNavigation } from '../../components';
-import { Albums, NewPost, Posts, Home, PageNotFound } from '..';
+import {
+  Albums,
+  NewPost,
+  Posts,
+  Home,
+  PageNotFound,
+  FaqPageOne,
+  FaqPageTwo
+} from '..';
 
 type ReduxProps = {
   token: string;
+  navBtns: any;
 };
+
+const RoutePaths = [
+  {
+    component: Albums,
+    path: '/albums'
+  },
+  {
+    component: NewPost,
+    path: '/posts/newPost'
+  },
+  {
+    component: Posts,
+    path: '/posts'
+  },
+  {
+    component: FaqPageOne,
+    path: '/faq/page1'
+  },
+  {
+    component: FaqPageTwo,
+    path: '/faq/page2'
+  },
+  {
+    component: Home,
+    path: '/faq'
+  },
+  {
+    component: Home,
+    path: '/'
+  },
+  {
+    component: PageNotFound
+  }
+];
 
 class App extends React.Component<ReduxProps> {
   componentDidMount() {}
 
   render() {
+    const { navBtns } = this.props;
+
+    let routes;
+    routes = RoutePaths.map((route, i = 0) => {
+      return <Route key={++i} path={route.path} component={route.component} />;
+    });
+
     return (
       <main>
         <BrowserRouter>
-          <AppNavigation />
+          <AppNavigation navBtns={navBtns} />
           <PageContainer>
-            <Switch>
-              <Route path={'/albums'} component={Albums} />
-              <Route path={'/posts/newPost'} component={NewPost} />
-              <Route path={'/posts'} component={Posts} />
-              <Route path={'/'} component={Home} />
-              <Route component={PageNotFound} />
-            </Switch>
+            <Switch>{routes}</Switch>
           </PageContainer>
         </BrowserRouter>
       </main>
@@ -36,7 +80,8 @@ class App extends React.Component<ReduxProps> {
 
 const mapStateToProps = (state: ReduxState) => {
   return {
-    token: state.appReducer.token
+    token: state.appReducer.token,
+    navBtns: state.appReducer.navBtns
   };
 };
 

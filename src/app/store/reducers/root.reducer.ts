@@ -11,11 +11,13 @@ export type ReduxState = {
   appReducer: {
     token: string;
     error: boolean;
-    isHomePage: boolean,
+    navBtns: any;
     homePageContent: any,
     postsPageContent: any;
     albumsPageContent: any;
     newPostPageContent: any;
+    faqPageOne: any;
+    faqPageTwo: any;
   },
   postReducer: {
     post: any;

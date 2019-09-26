@@ -1,0 +1,53 @@
+@import '../../../../assets/utilities/color-variables';
+
+.App-navigation-btns-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+    color: $secondary-contrastText;
+    margin: 5px;
+    padding: 5px;
+    background-color: $primary-light;
+  }
+}
+
+.App-navigation-btns-list li:hover a,
+.App-navigation-btns-list li:active a,
+.App-navigation-btns-list a.my-active {
+  color: $primary-light;
+  background-color: $secondary-contrastText;
+}
+
+.App-navigation-items-list {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  z-index: 10;
+  padding-inline-start: 0px;
+  padding-top: 8px;
+  li {
+    display: block;
+  }
+  a {
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    padding-top: 0px;
+    color: $primary-light;
+    background-color: $secondary-contrastText;
+  }
+  li:hover a {
+    color: $secondary-contrastText;
+    background-color: $primary-light;
+  }
+}
+
+.App-navigation-btns-list li:hover .App-navigation-items-list {
+  display: block;
+}

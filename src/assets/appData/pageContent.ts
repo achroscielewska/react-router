@@ -62,4 +62,24 @@ export const ALBUMS_PAGE_CONTENT = {
         articleTitle: "Albums page description",
         article: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget diam in ante rhoncus pellentesque sed sed erat. Nunc lobortis rhoncus fringilla. Vivamus varius commodo mauris ac laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce ultricies hendrerit velit non tristique. Integer ornare, felis a tincidunt vulputate, turpis lacus tempus est, venenatis sollicitudin dolor leo vitae mi. Nunc vitae sagittis lectus. Nullam sed viverra urna, ut mollis turpis. Pellentesque varius nisi at tellus lacinia, et pulvinar lorem accumsan. Sed eleifend ante at enim varius, vel volutpat urna viverra. Fusce ut odio eu elit venenatis blandit. Integer eget risus augue. Fusce maximus eget quam in tristique. Pellentesque sit amet nisi interdum, aliquam ex sed, mollis orci. Aenean fermentum lacinia tempor. Phasellus nec ex eleifend enim porta porta a eget nunc."
     }
-} 
+}
+
+export const FAQ_PAGE_ONE = {
+    pageHeader: {
+        title: "FAQ: Page One"
+    },
+    pageContent: {
+        articleTitle: "",
+        article: ""
+    }
+}
+
+export const FAQ_PAGE_TWO = {
+    pageHeader: {
+        title: "FAQ: Page Two"
+    },
+    pageContent: {
+        articleTitle: "",
+        article: ""
+    }
+}

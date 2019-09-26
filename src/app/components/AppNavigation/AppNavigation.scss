@@ -6,28 +6,5 @@
   background-color: $primary-color;
   text-transform: uppercase;
   text-align: right;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    
-  }
-  a {
-    text-decoration: none;
-    color: $secondary-contrastText;
-    margin: 5px;
-    padding: 5px;
-    background-color: $primary-light;
-  }
 }
 
-.App-navigation li:hover a,
-.App-navigation li:active a,
-.App-navigation a.my-active {
-    color: $primary-light;
-    background-color: $secondary-contrastText;
-
-}
