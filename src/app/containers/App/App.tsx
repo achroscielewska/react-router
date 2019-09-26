@@ -2,16 +2,10 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
 import { ReduxState } from '../../store/reducers/root.reducer';
 
-import PageNotFound from '../staticPages/PageNotFound';
-import Home from '../Home/Home';
-import Posts from '../Posts/Posts';
-import Albums from '../Albums/Albums';
-import NewPost from '../Posts/NewPost/NewPost';
-
 import { PageContainer, AppNavigation } from '../../components';
+import { Albums, NewPost, Posts, Home, PageNotFound } from '..';
 
 type ReduxProps = {
   token: string;
