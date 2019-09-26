@@ -51,6 +51,6 @@ You will also see any lint errors in the console.
 
 - routes lazy loading added to route in app container
 
-## navigation-dropdown
+## navigation-dropdown branch
 
 - complex navigation PoC
