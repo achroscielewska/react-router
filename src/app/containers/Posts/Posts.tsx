@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { Route, RouteComponentProps } from 'react-router-dom';
 
 import { ReduxState } from '../../store/reducers/root.reducer';
 import * as actionCreators from '../../store/actions/index';
 
 import { PageHeader, PageContent, ListItem, ArticleNavigation } from '../../components';
-import OnePost from './OnePost/OnePost';
-import { Route, RouteComponentProps } from 'react-router-dom';
+
+import { OnePost } from '..';
 
 type ReduxProps = {
   pageContent: {
